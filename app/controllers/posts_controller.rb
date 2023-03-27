@@ -51,8 +51,7 @@ end
   def post_params
     params.require(:post).permit(:content)
   end
-
-  # idをキーとして値を取得するメソッドを追加
+  
   def set_post
     @post = Post.find(params[:id])
   end

@@ -1,15 +1,14 @@
-# バーシャルを下記のように作成し、宣言することでviewを共通化できる
 <%= form_with(model: @post, local: true ,url: choose_new_or_edit ) do |form| %>
   <% if @post.errors.any? %>
-   <div id="error_explanation">
-     <h2><%= @post.errors.count %>件のエラーがあります。</h2>
-     <ul>
-      
-     <% @post.errors.full_messages.each do |msg| %>
-       <li><%= msg %></li>
-     <% end %>
+    <div id="error_explanation">
+      <h2><%= @post.errors.count %>件のエラーがあります。</h2>
+      <ul>
+
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
       </ul>
-   </div>
+    </div>
   <% end %>
 
   <div class="post_content">
